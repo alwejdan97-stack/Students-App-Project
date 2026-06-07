@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 public class StudentController {
-    Student student=new Student("S-01","Wejdan","A+");
+    private Student student=new Student("S-01","Wejdan","A+");
 
     @PutMapping("updateStudent")
     public String updateStudent(@RequestParam String studentId){
