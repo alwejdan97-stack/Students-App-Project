@@ -7,17 +7,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 public class StudentController {
-    private Student student=new Student("S-01","Wejdan","A+");
+    Student student=new Student("S-01","Wejdan","A+");
 
     @PutMapping("updateStudent")
-    public String updateStudent(@RequestParam String studentId){
-        System.out.println("The current student id is: "+student.getStudentId());
-        if(!student.getStudentId().equals(studentId)){
-            student.setStudentId(studentId);
-            System.out.println("Student ID Updated SUCCESSFULLY...");
-            return "Student ID After Updating is: "+student.getStudentId();
+    public String updateStudent(@RequestParam String studentName){
+        String previousName=student.getStudentName();
+        System.out.println("The current student id is: "+previousName);
+        if(!previousName.equals(studentName)){
+            student.setStudentName(studentName);
+            System.out.println("Student Name Updated SUCCESSFULLY...");
+            return "Previous Name is: "+ previousName+ ", After Updating is: "+student.getStudentName();
         }else{
-            return "Student ID Is Matching Old ID, Updating FAILD...";
+            return "Student Name Is Matching Old Name, Updating FAILED...";
 
         }
     }
