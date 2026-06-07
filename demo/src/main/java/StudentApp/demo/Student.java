@@ -1,21 +1,21 @@
 package StudentApp.demo;
 
 public class Student {
-    private int studentId;
+    private String studentId;
     private String studentName;
     private String grade;
 
-    public Student(int studentId, String studentName, String grade) {
+    public Student(String studentId, String studentName, String grade) {
         this.studentId = studentId;
         this.studentName = studentName;
         this.grade = grade;
     }
 
-    public int getStudentId() {
+    public String getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(int studentId) {
+    public void setStudentId(String studentId) {
         this.studentId = studentId;
     }
 
