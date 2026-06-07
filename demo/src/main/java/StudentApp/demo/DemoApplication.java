@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		//SpringApplication.run(DemoApplication.class, args);
 		String currentStudentName="Wejdan";
 		String newStudentName="Hoor";
 		boolean status=false;
@@ -18,7 +18,7 @@ public class DemoApplication {
 			status=true;
 			System.out.println("Student name UPDATED...");
 		}else{
-			System.out.println("Student name NOT UPDATED...");
+			System.out.println("Student name already existing...");
 		}
 	}
 }
