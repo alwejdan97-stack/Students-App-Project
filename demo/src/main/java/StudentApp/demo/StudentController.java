@@ -10,14 +10,15 @@ public class StudentController {
     Student student=new Student("S-01","Wejdan","A+");
 
     @PutMapping("updateStudent")
-    public Student updateStudent(@RequestParam String studentId){
+    public String updateStudent(@RequestParam String studentId){
         System.out.println("The current student id is: "+student.getStudentId());
         if(!student.getStudentId().equals(studentId)){
             student.setStudentId(studentId);
             System.out.println("Student ID Updated SUCCESSFULLY...");
+            return "Student ID After Updating is: "+student.getStudentId();
         }else{
-            System.out.println("Student ID Is Matching Old ID, Updated FAILD...");
+            return "Student ID Is Matching Old ID, Updating FAILD...";
+
         }
-        return student;
     }
 }
