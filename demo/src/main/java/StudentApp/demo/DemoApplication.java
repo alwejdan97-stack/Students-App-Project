@@ -27,5 +27,11 @@ public class DemoApplication {
 		System.out.println("Student ID: "+student.getStudentId());
 		System.out.println("Student Name: "+student.getStudentName());
 		System.out.println("Student Grade: "+student.getGrade());
+
+		System.out.println(" *** Updated Student Details ***");
+		student.setStudentId("S1-01");
+		System.out.println("Student ID: "+student.getStudentId());
+		System.out.println("Student Name: "+student.getStudentName());
+		System.out.println("Student Grade: "+student.getGrade());
 	}
 }
